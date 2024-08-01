@@ -1,0 +1,1 @@
+execute if score #time time matches -1 run function es2:before/root
