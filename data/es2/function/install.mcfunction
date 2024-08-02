@@ -1,4 +1,4 @@
-execute if entity f-f-f-f-f run return run tellraw @s ["<", {"text": "強化空島戰爭Lite", "color": "aqua"}, "> ", {"text": "遊戲已經安裝好了", "color": "red"}]
+execute if entity f-f-f-f-f run return run tellraw @s ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "遊戲已經安裝好了", "color": "red"}]
 
 gamerule commandBlockOutput false
 gamerule logAdminCommands false
@@ -21,16 +21,45 @@ execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 .0 ~.5 {Cust
 schedule function es2:before/generate/root 1
 
 scoreboard objectives add information dummy {"text": "強化空島戰爭 Lite", "color": "aqua"}
-scoreboard objectives add health health "❤️"
+scoreboard objectives add health health "❤"
 scoreboard objectives add time dummy
 scoreboard objectives add generate dummy
+
+#第一本書
+#開放選隊
+scoreboard objectives add team_setting dummy
+#同隊傷害
+scoreboard objectives add friendly_fire dummy
+#同隊推擠
+scoreboard objectives add friendly_push dummy
+#開始
+scoreboard objectives add start dummy
 
 scoreboard objectives setdisplay sidebar information
 scoreboard objectives setdisplay below_name health
 scoreboard objectives setdisplay list health
 
+scoreboard objectives modify information numberformat blank
+
 scoreboard players set #tick time 0
 scoreboard players set #time time -1
+
+#不能選隊
+scoreboard players set 00000000-0000-0000-0000-000000000000 team_setting 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 team_setting 0
+#沒有同隊傷害
+scoreboard players set 00000000-0000-0000-0000-000000000000 friendly_fire 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 friendly_fire 0
+#沒有同隊推擠
+scoreboard players set 00000000-0000-0000-0000-000000000000 friendly_push 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 friendly_push 0
+#預設4隊
+scoreboard players set #team team_setting 4
+#還沒開始
+scoreboard players set 00000000-0000-0000-0000-000000000000 start 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 start 0
+
+scoreboard players set 現在時間 information 0
 
 team add player "強化空島戰爭 Lite"
 team add red "紅隊"
@@ -38,6 +67,8 @@ team add blue "藍隊"
 team add green "綠隊"
 team add yellow "黃隊"
 team add spectator "旁觀者"
+
+team add time "現在時間"
 
 team modify red color red
 team modify blue color blue

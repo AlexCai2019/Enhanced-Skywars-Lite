@@ -1,0 +1,1 @@
+$team modify time suffix " $(h):$(m):$(s)"

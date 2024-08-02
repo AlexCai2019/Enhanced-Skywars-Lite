@@ -65,10 +65,10 @@ execute if score #tick generate matches 171 run fill ~34 1 ~-1 ~36 3 ~1 sand
 execute if score #tick generate matches 172 run fill ~-1 1 ~-34 ~1 3 ~-36 sand
 execute if score #tick generate matches 173 run fill ~-34 1 ~-1 ~-36 3 ~1 sand
 
-execute if score #tick generate matches 174 run setblock ~35 4 ~ chest[facing=west]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}]}
-execute if score #tick generate matches 175 run setblock ~ 4 ~35 chest[facing=north]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}]}
-execute if score #tick generate matches 176 run setblock ~-35 4 ~ chest[facing=east]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}]}
-execute if score #tick generate matches 177 run setblock ~ 4 ~-35 chest[facing=south]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}]}
+execute if score #tick generate matches 174 run setblock ~35 4 ~ chest[facing=west]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}, {Slot: 6, id: "potion", components: {item_name: '[{"translate": "effect.minecraft.levitation"}, "藥水"]', potion_contents: {custom_effects: [{id: "levitation", duration: 80, amplifier: 1}], custom_color: 13565951}}}]}
+execute if score #tick generate matches 175 run setblock ~ 4 ~35 chest[facing=north]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}, {Slot: 6, id: "potion", components: {item_name: '[{"translate": "effect.minecraft.levitation"}, "藥水"]', potion_contents: {custom_effects: [{id: "levitation", duration: 80, amplifier: 1}], custom_color: 13565951}}}]}
+execute if score #tick generate matches 176 run setblock ~-35 4 ~ chest[facing=east]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}, {Slot: 6, id: "potion", components: {item_name: '[{"translate": "effect.minecraft.levitation"}, "藥水"]', potion_contents: {custom_effects: [{id: "levitation", duration: 80, amplifier: 1}], custom_color: 13565951}}}]}
+execute if score #tick generate matches 177 run setblock ~ 4 ~-35 chest[facing=south]{Items: [{Slot: 0, id: "iron_block"}, {Slot: 1, id: "cobweb", count: 6}, {Slot: 2, id: "arrow", count: 6}, {Slot: 3, id: "gunpowder", count: 5}, {Slot: 4, id: "wind_charge"}, {Slot: 5, id: "chainmail_helmet"}, {Slot: 6, id: "potion", components: {item_name: '[{"translate": "effect.minecraft.levitation"}, "藥水"]', potion_contents: {custom_effects: [{id: "levitation", duration: 80, amplifier: 1}], custom_color: 13565951}}}]}
 
 execute if score #tick generate matches 178 run fill ~15 0 ~15 ~17 3 ~17 hay_block
 execute if score #tick generate matches 179 run fill ~-15 0 ~15 ~-17 3 ~17 hay_block
@@ -83,15 +83,11 @@ execute if score #tick generate matches 185 run setblock ~-16 4 ~-16 chest[facin
 execute if score #tick generate matches 186 run setblock ~ 0 ~ gold_block
 execute if score #tick generate matches 187 run setblock ~ 1 ~ barrel[facing=up]{Items: [{Slot: 0, id: "enchanting_table"}, {Slot: 1, id: "lapis_lazuli", count: 16}, {Slot: 2, id: "experience_bottle", count: 20}, {Slot: 3, id: "totem_of_undying"}, {Slot: 4, id: "diamond", count: 2}, {Slot: 5, id: "golden_apple", count: 2}, {Slot: 6, id: "ender_pearl", count: 2}, {Slot: 7, id: "wind_charge"}]}
 
-execute if score #tick generate matches 188 run fill ~-5 63 ~-5 ~5 66 ~5 barrier hollow
-execute if score #tick generate matches 189 run fill ~-4 66 ~-4 ~4 66 ~4 air
+execute if score #tick generate matches 188 run fill ~-5 31 ~-5 ~5 34 ~5 barrier hollow
+execute if score #tick generate matches 189 run fill ~-4 34 ~-4 ~4 34 ~4 air
 
-execute unless score #tick generate matches 200 run return run schedule function es2:before/generate/root 1
+execute if score #tick generate matches 190 run setblock ~ -64 ~ repeating_command_block[facing=down]{auto:true, TrackOutput: true, Command: "function es2:before/real_time/query"}
 
-scoreboard players reset #tick generate
-scoreboard players set #time time -1
-tp @s ~ 64.0 ~ .0 .0
-tp @a ~ 64.0 ~ .0 .0
-clear @a
-effect clear @a
-gamemode adventure @a
+execute if score #tick generate matches 200 run return run function es2:before/resume/root
+
+schedule function es2:before/generate/root 1
