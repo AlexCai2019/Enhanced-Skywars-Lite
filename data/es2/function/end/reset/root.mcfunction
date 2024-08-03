@@ -1,5 +1,5 @@
 #讓盔甲座執行指令
-execute unless entity @s[tag=center] as f-f-f-f-f at @s run return run function es2:before/generate/root
+execute unless entity @s[tag=center] as f-f-f-f-f at @s run return run function es2:end/reset/root
 
 gamemode spectator @a[gamemode=!spectator]
 
@@ -8,7 +8,7 @@ scoreboard players add #tick generate 1
 execute if score #tick generate matches 1 run tp @s ~ 318.5 ~
 
 #-64 ~ 319 組共384個方塊 384 / 3 = 128
-execute if score #tick generate matches 2..129 run function es2:before/generate/clear
+execute if score #tick generate matches 2..129 run function es2:end/reset/clear
 
 execute if score #tick generate matches 130 run fill ~34 0 ~34 ~38 0 ~38 stone
 execute if score #tick generate matches 131 run fill ~-34 0 ~34 ~-38 0 ~38 stone
@@ -45,15 +45,15 @@ execute if score #tick generate matches 155 run fill ~-32 5 ~32 ~-36 5 ~36 oak_l
 execute if score #tick generate matches 156 run fill ~32 5 ~-32 ~36 5 ~-36 oak_leaves keep
 execute if score #tick generate matches 157 run fill ~-32 5 ~-32 ~-36 5 ~-36 oak_leaves keep
 
-execute if score #tick generate matches 158 positioned ~34 6 ~34 run function es2:before/generate/cross/big
-execute if score #tick generate matches 159 positioned ~-34 6 ~34 run function es2:before/generate/cross/big
-execute if score #tick generate matches 160 positioned ~34 6 ~-34 run function es2:before/generate/cross/big
-execute if score #tick generate matches 161 positioned ~-34 6 ~-34 run function es2:before/generate/cross/big
+execute if score #tick generate matches 158 positioned ~34 6 ~34 run function es2:end/reset/cross/big
+execute if score #tick generate matches 159 positioned ~-34 6 ~34 run function es2:end/reset/cross/big
+execute if score #tick generate matches 160 positioned ~34 6 ~-34 run function es2:end/reset/cross/big
+execute if score #tick generate matches 161 positioned ~-34 6 ~-34 run function es2:end/reset/cross/big
 
-execute if score #tick generate matches 162 positioned ~34 7 ~34 run function es2:before/generate/cross/small
-execute if score #tick generate matches 163 positioned ~-34 7 ~34 run function es2:before/generate/cross/small
-execute if score #tick generate matches 164 positioned ~34 7 ~-34 run function es2:before/generate/cross/small
-execute if score #tick generate matches 165 positioned ~-34 7 ~-34 run function es2:before/generate/cross/small
+execute if score #tick generate matches 162 positioned ~34 7 ~34 run function es2:end/reset/cross/small
+execute if score #tick generate matches 163 positioned ~-34 7 ~34 run function es2:end/reset/cross/small
+execute if score #tick generate matches 164 positioned ~34 7 ~-34 run function es2:end/reset/cross/small
+execute if score #tick generate matches 165 positioned ~-34 7 ~-34 run function es2:end/reset/cross/small
 
 execute if score #tick generate matches 166 run fill ~-1 0 ~34 ~1 0 ~36 sandstone
 execute if score #tick generate matches 167 run fill ~34 0 ~-1 ~36 0 ~1 sandstone
@@ -86,8 +86,8 @@ execute if score #tick generate matches 187 run setblock ~ 1 ~ barrel[facing=up]
 execute if score #tick generate matches 188 run fill ~-5 31 ~-5 ~5 34 ~5 barrier hollow
 execute if score #tick generate matches 189 run fill ~-4 34 ~-4 ~4 34 ~4 air
 
-execute if score #tick generate matches 190 run setblock ~ -64 ~ repeating_command_block[facing=down]{auto:true, TrackOutput: true, Command: "function es2:before/real_time/query"}
+execute if score #tick generate matches 190 run setblock ~ 319 ~ repeating_command_block[facing=down]{auto: true, TrackOutput: true, Command: "execute unless entity f-f-f-f-f"}
 
-execute if score #tick generate matches 200 run return run function es2:before/resume/root
+execute if score #tick generate matches 200 run return run function es2:end/reset/resume/root
 
-schedule function es2:before/generate/root 1
+schedule function es2:end/reset/root 1

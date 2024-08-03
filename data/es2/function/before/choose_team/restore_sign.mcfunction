@@ -1,0 +1,2 @@
+$setblock ~ ~-1 ~ $(color)_concrete
+$setblock ~ ~ ~ oak_sign{front_text: {messages: ['{"text": "", "clickEvent": {"action": "run_command", "value": "function es2:before/choose_team/click {team: \\"$(team)\\"}"}}', '$(message)', '["(", {"keybind": "key.use"}, ")"]', '""']}}
