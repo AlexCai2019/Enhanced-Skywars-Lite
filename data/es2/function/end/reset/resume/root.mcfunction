@@ -1,4 +1,5 @@
 gamerule randomTickSpeed 0
+gamerule naturalRegeneration true
 
 scoreboard players reset #tick generate
 scoreboard players set #time time -1
