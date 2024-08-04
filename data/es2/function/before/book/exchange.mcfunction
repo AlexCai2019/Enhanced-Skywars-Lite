@@ -1,2 +1,2 @@
 $scoreboard players operation 00000000-0000-0000-0000-000000000000 $(objective) >< 00000000-0000-0000-0000-000000000001 $(objective)
-$execute at 0-0-0-0-0 run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> $(name) 現已設為 ", {"selector": "@e[type=marker, tag=setting, scores={$(objective)=1}, distance=...1]"}]
+$function es2:utility/if_else {objective: "$(objective)", prefix: 'tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> $(name) 現已設為 ", {"selector": "0-0-0-0-', value1: '0"}]', value2: '1"}]'}

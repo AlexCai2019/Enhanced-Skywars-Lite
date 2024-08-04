@@ -31,17 +31,32 @@ scoreboard players set 存活隊伍數 information 2
 scoreboard players operation 00000000-0000-0000-0000-000000000000 start >< 00000000-0000-0000-0000-000000000001 start
 
 #同隊傷害
-function es2:before/start/if_else {objective: "friendly_fire", prefix: 'function es2:before/start/team_modify {option: "frendlyFire", value: "', value1: 'false"}', value2: 'true"}'}
+function es2:utility/if_else {objective: "friendly_fire", prefix: 'function es2:before/start/team_modify {option: "frendlyFire", value: "', value1: 'false"}', value2: 'true"}'}
 
 #同隊推擠
 #https://bugs.mojang.com/browse/MC-87984
-function es2:before/start/if_else {objective: "friendly_push", prefix: 'function es2:before/start/team_modify {option: "collisionRule", value: "', value1: 'pushOwnTeam"}', value2: 'always"}'}
+function es2:utility/if_else {objective: "friendly_push", prefix: 'function es2:before/start/team_modify {option: "collisionRule", value: "', value1: 'pushOwnTeam"}', value2: 'always"}'}
 
 #自然回血
-function es2:before/start/if_else {objective: "regeneration", prefix: "gamerule naturalRegeneration ", value1: "false", value2: "true"}
+function es2:utility/if_else {objective: "regeneration", prefix: "gamerule naturalRegeneration ", value1: "false", value2: "true"}
+
+#摔落傷害
+function es2:utility/if_else {objective: "fall_damage", prefix: "gamerule fallDamage ", value1: "false", value2: "true"}
+
+#燃燒傷害
+function es2:utility/if_else {objective: "fire_damage", prefix: "gamerule fireDamage ", value1: "false", value2: "true"}
 
 #無限水源
-function es2:before/start/if_else {objective: "water_source", prefix: "gamerule waterSourceConversion ", value1: "false", value2: "true"}
+function es2:utility/if_else {objective: "water_source", prefix: "gamerule waterSourceConversion ", value1: "false", value2: "true"}
 
 #無限岩漿源
-function es2:before/start/if_else {objective: "water_source", prefix: "gamerule lavaSourceConversion ", value1: "false", value2: "true"}
+function es2:utility/if_else {objective: "lava_source", prefix: "gamerule lavaSourceConversion ", value1: "false", value2: "true"}
+
+#弓箭合成
+function es2:utility/if_else {objective: "craft_projectile", prefix: 'function es2:before/start/recipe/projectile {operation: "', value1: 'take"}', value2: 'give"}'}
+
+#斧頭合成
+function es2:utility/if_else {objective: "craft_axe", prefix: 'function es2:before/start/recipe/axe {operation: "', value1: 'take"}', value2: 'give"}'}
+
+#盾牌合成
+function es2:utility/if_else {objective: "craft_shield", prefix: 'function es2:before/start/recipe/shield {operation: "', value1: 'take"}', value2: 'give"}'}

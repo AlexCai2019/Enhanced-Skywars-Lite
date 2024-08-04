@@ -44,12 +44,24 @@ scoreboard objectives add start dummy
 #第二本書
 #自然回血
 scoreboard objectives add regeneration dummy
+#摔落傷害
+scoreboard objectives add fall_damage dummy
+#火焰傷害
+scoreboard objectives add fire_damage dummy
 #無限水源
 scoreboard objectives add water_source dummy
 #無限岩漿源
 scoreboard objectives add lava_source dummy
 #黑曜石恢復
 scoreboard objectives add obsidian_back dummy
+#基岩地板
+scoreboard objectives add bedrock_floor dummy
+#弓箭合成
+scoreboard objectives add craft_projectile dummy
+#斧頭合成
+scoreboard objectives add craft_axe dummy
+#盾牌合成
+scoreboard objectives add craft_shield dummy
 
 scoreboard objectives setdisplay sidebar information
 scoreboard objectives setdisplay below_name health
@@ -76,18 +88,36 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 start 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 start 0
 
 #第二本書
-#自然回血
+#有自然回血
 scoreboard players set 00000000-0000-0000-0000-000000000000 regeneration 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 regeneration 1
-#無限水源
+#有摔落傷害
+scoreboard players set 00000000-0000-0000-0000-000000000000 fall_damage 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
+#有火焰傷害
+scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
+#有無限水源
 scoreboard players set 00000000-0000-0000-0000-000000000000 water_source 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 water_source 1
-#無限岩漿源
+#沒有無限岩漿源
 scoreboard players set 00000000-0000-0000-0000-000000000000 lava_source 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 lava_source 0
-#黑曜石恢復
+#沒有黑曜石恢復
 scoreboard players set 00000000-0000-0000-0000-000000000000 obsidian_back 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 obsidian_back 0
+#沒有基岩地板
+scoreboard players set 00000000-0000-0000-0000-000000000000 bedrock_floor 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 bedrock_floor 0
+#有弓箭合成
+scoreboard players set 00000000-0000-0000-0000-000000000000 craft_projectile 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 craft_projectile 1
+#有斧頭合成
+scoreboard players set 00000000-0000-0000-0000-000000000000 craft_axe 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 craft_axe 1
+#有盾牌合成
+scoreboard players set 00000000-0000-0000-0000-000000000000 craft_shield 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 craft_shield 1
 
 scoreboard players set §s information 1
 scoreboard players set 現在時間 information 0

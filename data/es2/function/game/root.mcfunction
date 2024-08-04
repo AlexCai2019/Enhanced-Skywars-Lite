@@ -1,6 +1,8 @@
 scoreboard players add #tick time 1
 execute if score #tick time matches 20 run function es2:game/second/root
 
+execute if score 00000000-0000-0000-0000-000000000001 obsidian_back matches 1 as @e[type=item] run function es2:game/obsidian_back/item
+
 execute store result score 00000000-0000-0000-0000-000000000002 survive if entity @a[team=red, gamemode=survival]
 execute store result score 00000000-0000-0000-0000-000000000003 survive if entity @a[team=blue, gamemode=survival]
 execute store result score 00000000-0000-0000-0000-000000000004 survive if entity @a[team=green, gamemode=survival]
