@@ -1,6 +1,8 @@
 gamerule randomTickSpeed 0
 gamerule naturalRegeneration true
 
+time set day
+
 scoreboard players reset #tick generate
 scoreboard players set #time time -1
 scoreboard players reset 存活人數 information

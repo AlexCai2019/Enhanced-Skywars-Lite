@@ -10,8 +10,9 @@ gamerule spawnRadius 0
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 
-time set day
 weather clear
+execute align xy run worldborder center ~.5 ~.5
+worldborder damage buffer .0
 
 execute unless entity 0-0-0-0-0 align xz run summon marker ~.5 -63.5 ~.5 {CustomName: '{"translate": "options.off", "color": "red"}', UUID: [I; 0, 0, 0, 0], Tags: ["setting"]}
 execute unless entity 0-0-0-0-1 align xz run summon marker ~.5 -63.5 ~.5 {CustomName: '{"translate": "options.on", "color": "green"}', UUID: [I; 0, 0, 0, 1], Tags: ["setting"]}
@@ -23,6 +24,7 @@ execute unless entity 0-0-0-0-6 align xz run summon marker ~3.5 33.5 ~-3.5 {Cust
 execute unless entity 0-0-0-0-7 align xz run summon marker ~4.5 33.5 ~-3.5 {UUID: [I; 0, 0, 0, 7], data: {team: "player", color: "white", message: '{"text": "退出隊伍", "color": "white", "bold": true}'}, Tags: ["choose_team"]}
 execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 .0 ~.5 {CustomName: '{"text": "強化空島戰爭 Lite", "color": "aqua"}', Invulnerable: true, Invisible: true, Marker: true, NoGravity: true, Small: true, NoBasePlate: true, DisabledSlots: 4144959, Pose: {LeftArm: [0f, 90f, 320f], RightArm: [0f, 270f, 40f]}, UUID: [I; 15, 983055, 983040, 15], Tags: ["center"]}
 
+schedule function es2:utility/record_spawn 1
 schedule function es2:end/reset/root 1
 
 scoreboard objectives add information dummy {"text": "強化空島戰爭 Lite", "color": "aqua"}
@@ -30,6 +32,8 @@ scoreboard objectives add health health "❤"
 scoreboard objectives add time dummy
 scoreboard objectives add generate dummy
 scoreboard objectives add survive dummy
+scoreboard objectives add mine_stone mined:stone
+scoreboard objectives add constant dummy
 
 #第一本書
 #開放選隊
@@ -63,13 +67,32 @@ scoreboard objectives add craft_axe dummy
 #盾牌合成
 scoreboard objectives add craft_shield dummy
 
+#第三本書
+#鐵礦狂熱
+scoreboard objectives add iron_ingot dummy
+#金礦狂熱
+scoreboard objectives add gold_ingot dummy
+#鑽石狂熱
+scoreboard objectives add diamond dummy
+#致命絕殺
+scoreboard objectives add wither dummy
+#限高限地
+scoreboard objectives add limit dummy
+
+#第四本書
+#邊界
+scoreboard objectives add border dummy
+
 scoreboard objectives setdisplay sidebar information
 scoreboard objectives setdisplay below_name health
 scoreboard objectives setdisplay list health
 
 scoreboard objectives modify information numberformat blank
 
+scoreboard players set §s information 1
+scoreboard players set 現在時間 information 0
 scoreboard players set #time time -3
+scoreboard players set #1200 constant 1200
 
 #第一本書
 #不能選隊
@@ -119,8 +142,33 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 craft_axe 1
 scoreboard players set 00000000-0000-0000-0000-000000000000 craft_shield 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 craft_shield 1
 
-scoreboard players set §s information 1
-scoreboard players set 現在時間 information 0
+#第三本書
+#鐵礦狂熱
+scoreboard players set #chance iron_ingot 0
+
+#金礦狂熱
+scoreboard players set #chance gold_ingot 0
+
+#鑽石狂熱
+scoreboard players set #chance diamond 0
+
+#沒有致命絕殺
+scoreboard players set 00000000-0000-0000-0000-000000000000 wither 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 wither 0
+scoreboard players set #minute wither 5
+
+#沒有限高限地
+scoreboard players set 00000000-0000-0000-0000-000000000000 limit 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 limit 0
+scoreboard players set #minute limit 5
+scoreboard players set #highest limit 32
+scoreboard players set #lowest limit -32
+
+#第五本書
+scoreboard players set #origin border 100
+scoreboard players set #minute border 5
+scoreboard players set #shrink border 5
+scoreboard players set #size border 16
 
 team add player "強化空島戰爭 Lite"
 team add red "紅隊"
@@ -161,3 +209,10 @@ team join spectator_count 旁觀者人數
 team join team_count 隊伍數
 team join team_count 存活隊伍數
 team join time 現在時間
+
+bossbar add es2:wither {"text": "致命絕殺", "color": "red"}
+bossbar set es2:wither color red
+bossbar add es2:limit {"text": "限高限地", "color": "green"}
+bossbar set es2:limit color green
+bossbar add es2:border {"text": "邊界縮圈", "color": "aqua"}
+bossbar set es2:border color blue

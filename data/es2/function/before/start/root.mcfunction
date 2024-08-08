@@ -28,6 +28,7 @@ scoreboard players reset 旁觀者人數 information
 scoreboard players set 存活人數 information 3
 scoreboard players set 存活隊伍數 information 2
 
+#start變為0
 scoreboard players operation 00000000-0000-0000-0000-000000000000 start >< 00000000-0000-0000-0000-000000000001 start
 
 #同隊傷害
@@ -60,3 +61,11 @@ function es2:utility/if_else {objective: "craft_axe", prefix: 'function es2:befo
 
 #盾牌合成
 function es2:utility/if_else {objective: "craft_shield", prefix: 'function es2:before/start/recipe/shield {operation: "', value1: 'take"}', value2: 'give"}'}
+
+scoreboard players reset * mine_stone
+
+execute if score 00000000-0000-0000-0000-000000000001 wither matches 1 run function es2:before/start/event {objective: "wither"}
+
+execute if score 00000000-0000-0000-0000-000000000001 limit matches 1 run function es2:before/start/event {objective: "limit"}
+
+execute if score 00000000-0000-0000-0000-000000000001 border matches 1 run function es2:before/start/event {objective: "border"}

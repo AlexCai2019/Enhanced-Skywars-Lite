@@ -5,7 +5,7 @@ gamemode spectator @a[gamemode=!spectator]
 
 scoreboard players add #tick generate 1
 
-execute if score #tick generate matches 1 run tp @s ~ 318.5 ~
+execute if score #tick generate matches 1 run function es2:end/reset/begin
 
 #-64 ~ 319 組共384個方塊 384 / 3 = 128
 execute if score #tick generate matches 2..129 run function es2:end/reset/clear

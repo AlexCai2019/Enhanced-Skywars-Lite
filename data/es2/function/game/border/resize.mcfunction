@@ -1,0 +1,1 @@
+$worldborder set $(size) $(shrink)
