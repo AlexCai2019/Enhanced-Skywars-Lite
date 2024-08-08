@@ -8,10 +8,10 @@ xp set @s 0 levels
 xp set @s 0 points
 
 #如果本來有隊伍的 就加入隊伍 傳送 轉生存
-execute if entity @s[tag=red] run return run function es2:before/start/player/survival {team: "red", dest: "~36 3 ~36 135.0"}
-execute if entity @s[tag=blue] run return run function es2:before/start/player/survival {team: "blue", dest: "~-36 3 ~-36 -45.0"}
-execute if entity @s[tag=green] run return run function es2:before/start/player/survival {team: "green", dest: "~-36 3 ~36 -135.0"}
-execute if entity @s[tag=yellow] run return run function es2:before/start/player/survival {team: "yellow", dest: "~36 3 ~-36 45.0"}
+execute if entity @s[tag=red] run return run function es2:before/start/player/survival {team: red, dest: "~36 3 ~36 135.0"}
+execute if entity @s[tag=blue] run return run function es2:before/start/player/survival {team: blue, dest: "~-36 3 ~-36 -45.0"}
+execute if entity @s[tag=green] run return run function es2:before/start/player/survival {team: green, dest: "~-36 3 ~36 -135.0"}
+execute if entity @s[tag=yellow] run return run function es2:before/start/player/survival {team: yellow, dest: "~36 3 ~-36 45.0"}
 
 #旁觀者
 team join spectator @s
