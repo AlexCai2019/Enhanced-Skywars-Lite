@@ -1,2 +1,2 @@
-kill a-b-0-5-5
-schedule clear es2:game/wither/loop
+bossbar set es2:border players
+schedule clear es2:game/border/loop

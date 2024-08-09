@@ -1,1 +1,0 @@
-$team modify time suffix [{"text": ": ", "color": "gray"}, {"text": "$(value)", "color": "gold"}]

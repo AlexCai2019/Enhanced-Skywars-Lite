@@ -11,8 +11,8 @@ gamerule doDaylightCycle false
 gamerule doWeatherCycle false
 
 weather clear
-execute align xy run worldborder center ~.5 ~.5
-worldborder damage buffer .0
+execute align xz run worldborder center ~.5 ~.5
+worldborder damage buffer .5
 
 execute unless entity 0-0-0-0-0 align xz run summon marker ~.5 -63.5 ~.5 {CustomName: '{"translate": "options.off", "color": "red"}', UUID: [I; 0, 0, 0, 0], Tags: ["setting"]}
 execute unless entity 0-0-0-0-1 align xz run summon marker ~.5 -63.5 ~.5 {CustomName: '{"translate": "options.on", "color": "green"}', UUID: [I; 0, 0, 0, 1], Tags: ["setting"]}
@@ -89,7 +89,8 @@ scoreboard objectives setdisplay list health
 
 scoreboard objectives modify information numberformat blank
 
-scoreboard players set §s information 1
+scoreboard players set §s information 2
+scoreboard players set 邊界大小 information 1
 scoreboard players set 現在時間 information 0
 scoreboard players set #time time -3
 scoreboard players set #1200 constant 1200
@@ -166,6 +167,8 @@ scoreboard players set #lowest limit -32
 
 #第五本書
 scoreboard players set #origin border 100
+scoreboard players set 00000000-0000-0000-0000-000000000000 border 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 border 0
 scoreboard players set #minute border 5
 scoreboard players set #shrink border 5
 scoreboard players set #size border 16
@@ -180,6 +183,7 @@ team add spectator "旁觀者"
 team add player_count "玩家人數"
 team add spectator_count "旁觀者人數"
 team add team_count "隊伍數"
+team add border "邊界大小"
 team add time "現在時間"
 
 team modify red color red
@@ -189,6 +193,7 @@ team modify yellow color yellow
 team modify spectator color black
 
 team modify spectator_count color black
+team modify border color aqua
 
 team modify red friendlyFire false
 team modify blue friendlyFire false
@@ -208,6 +213,7 @@ team join player_count 存活人數
 team join spectator_count 旁觀者人數
 team join team_count 隊伍數
 team join team_count 存活隊伍數
+team join border 邊界大小
 team join time 現在時間
 
 bossbar add es2:wither {"text": "致命絕殺", "color": "red"}

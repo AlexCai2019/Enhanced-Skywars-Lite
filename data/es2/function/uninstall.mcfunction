@@ -15,6 +15,9 @@ gamerule doDaylightCycle true
 gamerule doWeatherCycle true
 
 function es2:utility/restore_spawn with storage es2:data root.old_spawn
+worldborder center .0 .0
+worldborder damage buffer 5
+worldborder set 59999968
 
 kill 0-0-0-0-0
 kill 0-0-0-0-1
@@ -73,6 +76,7 @@ team remove spectator
 team remove player_count
 team remove spectator_count
 team remove team_count
+team remove border
 team remove time
 
 bossbar remove es2:wither

@@ -25,8 +25,8 @@ team modify time suffix [{"text": ": ", "color": "gray"}, {"text": "0:00", "colo
 scoreboard players reset 隊伍數 information
 scoreboard players reset 玩家人數 information
 scoreboard players reset 旁觀者人數 information
-scoreboard players set 存活人數 information 3
-scoreboard players set 存活隊伍數 information 2
+scoreboard players set 存活人數 information 4
+scoreboard players set 存活隊伍數 information 3
 
 #start變為0
 scoreboard players operation 00000000-0000-0000-0000-000000000000 start >< 00000000-0000-0000-0000-000000000001 start
