@@ -63,6 +63,9 @@ function es2:utility/if_else {objective: craft_axe, prefix: "function es2:before
 function es2:utility/if_else {objective: craft_shield, prefix: "function es2:before/start/recipe/shield {operation: ", value1: "take}", value2: "give}"}
 
 scoreboard players reset * mine_stone
+#確認需不需要狂熱
+scoreboard players set #fanatic mine_stone 1
+execute if score #chance iron_ingot matches 0 if score #chance gold_ingot matches 0 if score #chance diamond matches 0 run scoreboard players set #fanatic mine_stone 0
 
 execute if score 00000000-0000-0000-0000-000000000001 wither matches 1 run function es2:before/start/event {objective: wither}
 

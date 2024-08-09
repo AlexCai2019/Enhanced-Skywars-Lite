@@ -32,7 +32,7 @@ scoreboard objectives add health health "❤"
 scoreboard objectives add time dummy
 scoreboard objectives add generate dummy
 scoreboard objectives add survive dummy
-scoreboard objectives add mine_stone mined:stone
+scoreboard objectives add mine_stone mined:cobblestone
 scoreboard objectives add constant dummy
 
 #第一本書
