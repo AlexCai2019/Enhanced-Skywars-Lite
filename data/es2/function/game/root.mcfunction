@@ -1,7 +1,11 @@
 scoreboard players add #tick time 1
 execute if score #tick time matches 20 run function es2:game/second/root
 
+#黑曜石恢復
 execute if score 00000000-0000-0000-0000-000000000001 obsidian_back matches 1 as @e[type=item] run function es2:game/obsidian_back/item
+
+#禁止弓箭合成
+execute if score 00000000-0000-0000-0000-000000000000 craft_projectile matches 1 as @a[advancements={es2:command/obtain_arrow=true}] run function es2:game/craft_projectile/remove_arrow
 
 execute if score #fanatic mine_stone matches 1 as @a[scores={mine_stone=1..}] run function es2:game/mine_stone/root
 

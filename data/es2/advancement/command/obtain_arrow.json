@@ -1,0 +1,18 @@
+{
+	"criteria":
+	{
+		"obtain_arrow":
+		{
+			"trigger": "minecraft:inventory_changed",
+			"conditions":
+			{
+				"items":
+				[
+					{
+						"items": "minecraft:arrow"
+					}
+				]
+			}
+		}
+	}
+}
