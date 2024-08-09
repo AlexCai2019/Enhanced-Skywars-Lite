@@ -1,4 +1,4 @@
-execute if entity f-f-f-f-f run return run tellraw @s ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "遊戲已經安裝好了", "color": "red"}]
+execute if entity f-f-f-f-f run return run tellraw @s ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "遊戲已經安裝好了！", "color": "red"}]
 
 gamerule commandBlockOutput false
 gamerule logAdminCommands false
@@ -34,6 +34,9 @@ scoreboard objectives add generate dummy
 scoreboard objectives add survive dummy
 scoreboard objectives add mine_stone mined:cobblestone
 scoreboard objectives add constant dummy
+scoreboard objectives add first_spectator dummy
+scoreboard objectives add death deathCount
+scoreboard objectives add kill_player playerKillCount
 
 #第一本書
 #開放選隊
@@ -91,7 +94,6 @@ scoreboard objectives modify information numberformat blank
 
 scoreboard players set §s information 2
 scoreboard players set 邊界大小 information 1
-scoreboard players set 現在時間 information 0
 scoreboard players set #time time -3
 scoreboard players set #1200 constant 1200
 
@@ -215,6 +217,7 @@ team join team_count 隊伍數
 team join team_count 存活隊伍數
 team join border 邊界大小
 team join time 現在時間
+team join time 遊戲時間
 
 bossbar add es2:wither {"text": "致命絕殺", "color": "red"}
 bossbar set es2:wither color red

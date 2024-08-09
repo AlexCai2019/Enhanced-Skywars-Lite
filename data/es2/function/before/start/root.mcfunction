@@ -24,9 +24,11 @@ team modify time suffix [{"text": ": ", "color": "gray"}, {"text": "0:00", "colo
 
 scoreboard players reset 隊伍數 information
 scoreboard players reset 玩家人數 information
+scoreboard players reset 現在時間 information
 scoreboard players reset 旁觀者人數 information
 scoreboard players set 存活人數 information 4
 scoreboard players set 存活隊伍數 information 3
+scoreboard players set 遊戲時間 information 0
 
 #start變為0
 scoreboard players operation 00000000-0000-0000-0000-000000000000 start >< 00000000-0000-0000-0000-000000000001 start
@@ -61,6 +63,10 @@ function es2:utility/if_else {objective: craft_axe, prefix: "function es2:before
 
 #盾牌合成
 function es2:utility/if_else {objective: craft_shield, prefix: "function es2:before/start/recipe/shield {operation: ", value1: "take}", value2: "give}"}
+
+scoreboard players reset * first_spectator
+scoreboard players reset * death
+scoreboard players reset * kill_player
 
 scoreboard players reset * mine_stone
 #確認需不需要狂熱

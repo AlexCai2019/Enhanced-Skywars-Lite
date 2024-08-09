@@ -29,6 +29,7 @@ kill 0-0-0-0-6
 kill 0-0-0-0-7
 kill f-f-f-f-f
 kill a-b-0-5-5
+kill @e[type=wither_skull]
 
 scoreboard objectives remove information
 scoreboard objectives remove health
@@ -37,6 +38,9 @@ scoreboard objectives remove generate
 scoreboard objectives remove survive
 scoreboard objectives remove mine_stone
 scoreboard objectives remove constant
+scoreboard objectives remove first_spectator
+scoreboard objectives remove death
+scoreboard objectives remove kill_player
 
 scoreboard objectives remove team_setting
 scoreboard objectives remove friendly_fire

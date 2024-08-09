@@ -1,0 +1,27 @@
+{
+	"criteria":
+	{
+		"killed_by_wither":
+		{
+			"trigger": "minecraft:entity_killed_player",
+			"conditions":
+			{
+				"entity":
+				[
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate":
+						{
+							"type": "minecraft:wither"
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards":
+	{
+		"function": "es2:game/death/killed_by_wither"
+	}
+}
