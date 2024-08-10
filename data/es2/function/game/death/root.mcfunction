@@ -7,7 +7,7 @@ gamemode spectator @s
 execute as @a at @s run playsound entity.player.death
 execute unless score #first first_spectator matches 1 run function es2:game/death/first_spectator
 
-execute if entity @s[team=red] run return run function es2:game/death/eliminate {color: red, team: "紅"}
-execute if entity @s[team=blue] run return run function es2:game/death/eliminate {color: blue, team: "藍"}
-execute if entity @s[team=green] run return run function es2:game/death/eliminate {color: green, team: "綠"}
-execute if entity @s[team=yellow] run return run function es2:game/death/eliminate {color: yellow, team: "黃"}
+execute if entity @s[team=red] run return run execute unless entity @a[team=red, gamemode=survival] run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "紅隊", "color": "red"}, " 已被殲滅"]
+execute if entity @s[team=blue] run return run execute unless entity @a[team=blue, gamemode=survival] run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "藍隊", "color": "blue"}, " 已被殲滅"]
+execute if entity @s[team=green] run return run execute unless entity @a[team=green, gamemode=survival] run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "綠隊", "color": "green"}, " 已被殲滅"]
+execute if entity @s[team=yellow] run return run execute unless entity @a[team=yellow, gamemode=survival] run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "黃隊", "color": "yellow"}, " 已被殲滅"]

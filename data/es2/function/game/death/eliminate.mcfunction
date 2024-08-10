@@ -1,1 +1,0 @@
-$execute unless entity @a[team=$(color), gamemode=survival] run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> ", {"text": "$(team)隊", "color": "$(color)"}, " 已被殲滅"]
