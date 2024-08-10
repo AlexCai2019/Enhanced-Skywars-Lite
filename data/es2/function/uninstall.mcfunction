@@ -35,7 +35,6 @@ kill @e[type=wither_skull]
 scoreboard objectives remove information
 scoreboard objectives remove health
 scoreboard objectives remove time
-scoreboard objectives remove generate
 scoreboard objectives remove survive
 scoreboard objectives remove mine_stone
 scoreboard objectives remove constant
@@ -87,6 +86,7 @@ team remove time
 bossbar remove es2:wither
 bossbar remove es2:limit
 bossbar remove es2:border
+bossbar remove es2:reset
 
 schedule clear es2:utility/record_spawn
 schedule clear es2:game/wither/before_loop

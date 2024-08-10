@@ -29,7 +29,6 @@ schedule function es2:utility/record_spawn 1
 scoreboard objectives add information dummy {"text": "強化空島戰爭 Lite", "color": "aqua"}
 scoreboard objectives add health health "❤"
 scoreboard objectives add time dummy
-scoreboard objectives add generate dummy
 scoreboard objectives add survive dummy
 scoreboard objectives add mine_stone mined:cobblestone
 scoreboard objectives add constant dummy
@@ -68,6 +67,8 @@ scoreboard objectives add craft_projectile dummy
 scoreboard objectives add craft_axe dummy
 #盾牌合成
 scoreboard objectives add craft_shield dummy
+#起始物資
+scoreboard objectives add start_resource dummy
 
 #第三本書
 #鐵礦狂熱
@@ -143,6 +144,9 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 craft_axe 1
 #有盾牌合成
 scoreboard players set 00000000-0000-0000-0000-000000000000 craft_shield 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 craft_shield 1
+#沒有起始物資
+scoreboard players set 00000000-0000-0000-0000-000000000000 start_resource 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 start_resource 0
 
 #第三本書
 #鐵礦狂熱
@@ -224,8 +228,8 @@ bossbar add es2:limit {"text": "限高限地", "color": "green"}
 bossbar set es2:limit color green
 bossbar add es2:border {"text": "邊界縮圈", "color": "aqua"}
 bossbar set es2:border color blue
-bossbar add es2:reset {"text": "重設地圖中...", "color": "white"}
+bossbar add es2:reset {"text": "重設地圖中…", "color": "white"}
 bossbar set es2:reset color white
-bossbar set es2:reset max 143
+bossbar set es2:reset max 144
 
 function es2:end/reset/begin

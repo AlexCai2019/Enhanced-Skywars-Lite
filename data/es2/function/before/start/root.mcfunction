@@ -13,6 +13,9 @@ team empty spectator
 #有關玩家的部分
 execute as @a run function es2:before/start/player/root
 
+scoreboard players reset #edit start_resource
+execute if score 00000000-0000-0000-0000-000000000001 start_resource matches 1 at f-f-f-f-f positioned ~-4 32 ~3 as @a[team=!spectator] run function es2:before/start/start_resource
+
 #有關中心點的部分
 execute as f-f-f-f-f at @s run function es2:before/start/center
 
@@ -68,8 +71,8 @@ function es2:utility/if_else {objective: craft_shield, prefix: "function es2:bef
 scoreboard players reset * first_spectator
 scoreboard players reset * death
 scoreboard players reset * kill_player
-
 scoreboard players reset * mine_stone
+
 #確認需不需要狂熱
 scoreboard players set #fanatic mine_stone 1
 execute if score #chance iron_ingot matches 0 if score #chance gold_ingot matches 0 if score #chance diamond matches 0 run scoreboard players set #fanatic mine_stone 0
