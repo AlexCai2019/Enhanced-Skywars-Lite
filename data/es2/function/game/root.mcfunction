@@ -1,6 +1,8 @@
 scoreboard players add #tick time 1
 execute if score #tick time matches 20 run function es2:game/second/root
 
+execute as @a run function es2:game/player/root
+
 #黑曜石恢復
 execute if score 00000000-0000-0000-0000-000000000001 obsidian_back matches 1 as @e[type=item] run function es2:game/obsidian_back/item
 

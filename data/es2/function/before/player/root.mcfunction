@@ -1,4 +1,4 @@
-execute if entity @s[team=] run function es2:before/player/new_join
+execute if entity @s[team=] run function es2:utility/new_join {gamemode: adventure, team: player}
 
 execute at @s[predicate=es2:leave_lobby] run function es2:before/player/float
 

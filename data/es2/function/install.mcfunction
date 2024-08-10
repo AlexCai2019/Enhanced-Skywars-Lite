@@ -25,7 +25,6 @@ execute unless entity 0-0-0-0-7 align xz run summon marker ~4.5 33.5 ~-3.5 {UUID
 execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 .0 ~.5 {CustomName: '{"text": "強化空島戰爭 Lite", "color": "aqua"}', Invulnerable: true, Invisible: true, Marker: true, NoGravity: true, Small: true, NoBasePlate: true, DisabledSlots: 4144959, Pose: {LeftArm: [0f, 90f, 320f], RightArm: [0f, 270f, 40f]}, UUID: [I; 15, 983055, 983040, 15], Tags: ["center"]}
 
 schedule function es2:utility/record_spawn 1
-schedule function es2:end/reset/root 1
 
 scoreboard objectives add information dummy {"text": "強化空島戰爭 Lite", "color": "aqua"}
 scoreboard objectives add health health "❤"
@@ -225,3 +224,8 @@ bossbar add es2:limit {"text": "限高限地", "color": "green"}
 bossbar set es2:limit color green
 bossbar add es2:border {"text": "邊界縮圈", "color": "aqua"}
 bossbar set es2:border color blue
+bossbar add es2:reset {"text": "重設地圖中...", "color": "white"}
+bossbar set es2:reset color white
+bossbar set es2:reset max 143
+
+function es2:end/reset/begin

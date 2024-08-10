@@ -11,6 +11,7 @@ gamerule waterSourceConversion true
 gamerule lavaSourceConversion false
 gamerule spawnRadius 10
 gamerule randomTickSpeed 3
+gamerule commandModificationBlockLimit 32768
 gamerule doDaylightCycle true
 gamerule doWeatherCycle true
 
@@ -86,5 +87,15 @@ team remove time
 bossbar remove es2:wither
 bossbar remove es2:limit
 bossbar remove es2:border
+
+schedule clear es2:utility/record_spawn
+schedule clear es2:game/wither/before_loop
+schedule clear es2:game/limit/before_loop
+schedule clear es2:game/border/before_loop
+schedule clear es2:game/wither/loop
+schedule clear es2:game/limit/loop
+schedule clear es2:game/border/loop
+schedule clear es2:end/reset/begin
+schedule clear es2:end/reset/tick
 
 data remove storage es2:data root

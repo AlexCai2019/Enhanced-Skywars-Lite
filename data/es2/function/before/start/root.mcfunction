@@ -1,3 +1,4 @@
+gamerule sendCommandFeedback true
 gamerule randomTickSpeed 3
 
 #重設隊伍 避免有人分好隊後退出
