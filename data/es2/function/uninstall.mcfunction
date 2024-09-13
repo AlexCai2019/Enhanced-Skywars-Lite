@@ -82,6 +82,8 @@ team remove spectator_count
 team remove team_count
 team remove border
 team remove time
+team remove wither_display
+team remove void_display
 
 bossbar remove es2:wither
 bossbar remove es2:limit

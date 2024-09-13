@@ -21,7 +21,7 @@ execute unless entity 0-0-0-0-3 align xz run summon marker ~.5 33.5 ~-3.5 {Custo
 execute unless entity 0-0-0-0-4 align xz run summon marker ~1.5 33.5 ~-3.5 {CustomName: '{"text": "綠隊", "color": "green"}', data: {team: "green", color: "green", message: '["加入", {"text": "綠隊", "color": "green", "bold": true}]'}, UUID: [I; 0, 0, 0, 4], Tags: ["choose_team"]}
 execute unless entity 0-0-0-0-5 align xz run summon marker ~2.5 33.5 ~-3.5 {CustomName: '{"text": "黃隊", "color": "yellow"}', data: {team: "yellow", color: "yellow", message: '["加入", {"text": "黃隊", "color": "yellow", "bold": true}]'}, UUID: [I; 0, 0, 0, 5], Tags: ["choose_team"]}
 execute unless entity 0-0-0-0-6 align xz run summon marker ~3.5 33.5 ~-3.5 {CustomName: '{"text": "旁觀者", "color": "black"}', data: {team: "spectator", color: "black", message: '["加入", {"text": "旁觀者", "color": "black", "bold": true}]'}, UUID: [I; 0, 0, 0, 6], Tags: ["choose_team"]}
-execute unless entity 0-0-0-0-7 align xz run summon marker ~4.5 33.5 ~-3.5 {UUID: [I; 0, 0, 0, 7], data: {team: "player", color: "white", message: '{"text": "退出隊伍", "color": "white", "bold": true}'}, Tags: ["choose_team"]}
+execute unless entity 0-0-0-0-7 align xz run summon marker ~4.5 33.5 ~-3.5 {CustomName: '{"translate": "biome.minecraft.the_void"}', UUID: [I; 0, 0, 0, 7], data: {team: "player", color: "white", message: '{"text": "退出隊伍", "color": "white", "bold": true}'}, Tags: ["choose_team"]}
 execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 .0 ~.5 {CustomName: '{"text": "強化空島戰爭 Lite", "color": "aqua"}', Invulnerable: true, Invisible: true, Marker: true, NoGravity: true, Small: true, NoBasePlate: true, DisabledSlots: 4144959, Pose: {LeftArm: [0f, 90f, 320f], RightArm: [0f, 270f, 40f]}, UUID: [I; 15, 983055, 983040, 15], Tags: ["center"]}
 
 schedule function es2:utility/record_spawn 1
@@ -34,7 +34,8 @@ scoreboard objectives add mine_stone mined:cobblestone
 scoreboard objectives add constant dummy
 scoreboard objectives add first_spectator dummy
 scoreboard objectives add death deathCount
-scoreboard objectives add kill_player playerKillCount
+scoreboard objectives add void_death deathCount
+scoreboard objectives add kill_player playerKillCount "殺人數"
 
 #第一本書
 #開放選隊
@@ -86,7 +87,6 @@ scoreboard objectives add limit dummy
 #邊界
 scoreboard objectives add border dummy
 
-scoreboard objectives setdisplay sidebar information
 scoreboard objectives setdisplay below_name health
 scoreboard objectives setdisplay list health
 
@@ -190,6 +190,8 @@ team add spectator_count "旁觀者人數"
 team add team_count "隊伍數"
 team add border "邊界大小"
 team add time "現在時間"
+team add wither_display "凋零怪"
+team add void_display "虛空"
 
 team modify red color red
 team modify blue color blue
@@ -213,6 +215,9 @@ team modify yellow collisionRule pushOwnTeam
 
 team modify spectator deathMessageVisibility never
 
+team modify wither_display suffix {"translate": "entity.minecraft.wither"}
+team modify void_display suffix {"translate": "biome.minecraft.the_void"}
+
 team join player_count 玩家人數
 team join player_count 存活人數
 team join spectator_count 旁觀者人數
@@ -221,6 +226,8 @@ team join team_count 存活隊伍數
 team join border 邊界大小
 team join time 現在時間
 team join time 遊戲時間
+team join wither_display §w
+team join void_display §v
 
 bossbar add es2:wither {"text": "致命絕殺", "color": "red"}
 bossbar set es2:wither color red
