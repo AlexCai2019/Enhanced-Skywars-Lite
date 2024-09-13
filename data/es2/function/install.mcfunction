@@ -72,6 +72,8 @@ scoreboard objectives add craft_shield dummy
 scoreboard objectives add start_resource dummy
 
 #第三本書
+#狂熱
+scoreboard objectives add fanatic dummy
 #鐵礦狂熱
 scoreboard objectives add iron_ingot dummy
 #金礦狂熱
@@ -149,14 +151,14 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 start_resource 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 start_resource 0
 
 #第三本書
-#鐵礦狂熱
-scoreboard players set #chance iron_ingot 0
+#鐵錠狂熱
+scoreboard players set #iron_ingot fanatic 0
 
-#金礦狂熱
-scoreboard players set #chance gold_ingot 0
+#金錠狂熱
+scoreboard players set #gold_ingot fanatic 0
 
 #鑽石狂熱
-scoreboard players set #chance diamond 0
+scoreboard players set #diamond fanatic 0
 
 #沒有致命絕殺
 scoreboard players set 00000000-0000-0000-0000-000000000000 wither 1

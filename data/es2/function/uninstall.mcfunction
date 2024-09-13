@@ -40,6 +40,7 @@ scoreboard objectives remove mine_stone
 scoreboard objectives remove constant
 scoreboard objectives remove first_spectator
 scoreboard objectives remove death
+scoreboard objectives remove void_death
 scoreboard objectives remove kill_player
 
 scoreboard objectives remove team_setting
@@ -58,9 +59,7 @@ scoreboard objectives remove craft_projectile
 scoreboard objectives remove craft_axe
 scoreboard objectives remove craft_shield
 
-scoreboard objectives remove iron_ingot
-scoreboard objectives remove gold_ingot
-scoreboard objectives remove diamond
+scoreboard objectives remove fanatic
 scoreboard objectives remove wither
 scoreboard objectives remove limit
 

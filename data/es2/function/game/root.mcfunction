@@ -9,7 +9,8 @@ execute if score 00000000-0000-0000-0000-000000000001 obsidian_back matches 1 as
 #禁止弓箭合成
 execute if score 00000000-0000-0000-0000-000000000000 craft_projectile matches 1 as @a[advancements={es2:command/obtain_arrow=true}] run function es2:game/craft_projectile/remove_arrow
 
-execute if score #fanatic mine_stone matches 1 as @a[scores={mine_stone=1..}] run function es2:game/mine_stone/root
+#狂熱
+execute if score #need fanatic matches 1 as @a[scores={mine_stone=1..}] run function es2:game/mine_stone/root
 
 #每隊存活人數
 execute store result score 00000000-0000-0000-0000-000000000002 survive if entity @a[team=red, gamemode=survival]
