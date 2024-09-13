@@ -48,12 +48,6 @@ scoreboard objectives add friendly_push dummy
 scoreboard objectives add start dummy
 
 #第二本書
-#自然回血
-scoreboard objectives add regeneration dummy
-#摔落傷害
-scoreboard objectives add fall_damage dummy
-#火焰傷害
-scoreboard objectives add fire_damage dummy
 #無限水源
 scoreboard objectives add water_source dummy
 #無限岩漿源
@@ -72,6 +66,14 @@ scoreboard objectives add craft_shield dummy
 scoreboard objectives add start_resource dummy
 
 #第三本書
+#自然回血
+scoreboard objectives add regeneration dummy
+#摔落傷害
+scoreboard objectives add fall_damage dummy
+#火焰傷害
+scoreboard objectives add fire_damage dummy
+
+#第四本書
 #狂熱
 scoreboard objectives add fanatic dummy
 #鐵礦狂熱
@@ -85,7 +87,7 @@ scoreboard objectives add wither dummy
 #限高限地
 scoreboard objectives add limit dummy
 
-#第四本書
+#第五本書
 #邊界
 scoreboard objectives add border dummy
 
@@ -116,15 +118,6 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 start 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 start 0
 
 #第二本書
-#有自然回血
-scoreboard players set 00000000-0000-0000-0000-000000000000 regeneration 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 regeneration 1
-#有摔落傷害
-scoreboard players set 00000000-0000-0000-0000-000000000000 fall_damage 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
-#有火焰傷害
-scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
-scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
 #有無限水源
 scoreboard players set 00000000-0000-0000-0000-000000000000 water_source 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 water_source 1
@@ -151,6 +144,17 @@ scoreboard players set 00000000-0000-0000-0000-000000000000 start_resource 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 start_resource 0
 
 #第三本書
+#有自然回血
+scoreboard players set 00000000-0000-0000-0000-000000000000 regeneration 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 regeneration 1
+#有摔落傷害
+scoreboard players set 00000000-0000-0000-0000-000000000000 fall_damage 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
+#有火焰傷害
+scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
+scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
+
+#第四本書
 #鐵錠狂熱
 scoreboard players set #iron_ingot fanatic 0
 

@@ -48,9 +48,6 @@ scoreboard objectives remove friendly_fire
 scoreboard objectives remove friendly_push
 scoreboard objectives remove start
 
-scoreboard objectives remove regeneration
-scoreboard objectives remove fall_damage
-scoreboard objectives remove fire_damage
 scoreboard objectives remove water_source
 scoreboard objectives remove lava_source
 scoreboard objectives remove obsidian_back
@@ -58,6 +55,10 @@ scoreboard objectives remove bedrock_floor
 scoreboard objectives remove craft_projectile
 scoreboard objectives remove craft_axe
 scoreboard objectives remove craft_shield
+
+scoreboard objectives remove regeneration
+scoreboard objectives remove fall_damage
+scoreboard objectives remove fire_damage
 
 scoreboard objectives remove fanatic
 scoreboard objectives remove wither
