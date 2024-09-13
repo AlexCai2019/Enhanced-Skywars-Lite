@@ -8,7 +8,7 @@ execute store result storage es2:data root.game.border.size int 1 run scoreboard
 data modify storage es2:data root.game.border.shrink set value 0
 function es2:game/border/resize with storage es2:data root.game.border
 
-scoreboard objectives setdisplay sidebar information
+scoreboard objectives setdisplay sidebar
 
 #事件結束
 function es2:game/wither/end

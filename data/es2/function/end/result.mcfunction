@@ -6,5 +6,5 @@ execute if entity @a[team=blue, gamemode=survival] run return run function es2:e
 execute if entity @a[team=green, gamemode=survival] run return run function es2:end/victory {color: green, team: "綠"}
 execute if entity @a[team=yellow, gamemode=survival] run return run function es2:end/victory {color: yellow, team: "黃"}
 
-title @a subtitle "平手"
-tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> 遊戲結束 平手"]
+title @a subtitle {"text": "平手", "color": "gray"}
+tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> 遊戲結束 ", {"text": "平手", "color": "gray"}]

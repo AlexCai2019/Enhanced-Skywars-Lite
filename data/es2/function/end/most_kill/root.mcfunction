@@ -1,6 +1,8 @@
 #最高分的
 scoreboard players operation #most kill_player > @e kill_player
 execute if score #most kill_player matches 0 run return run tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> 殺人魔鬼 從缺"]
+#operation > 會將比較的對象設定為0
+scoreboard players reset @e[type=!player, scores={kill_player=0}] kill_player
 
 #找出殺人魔鬼
 execute as @e if score @s kill_player = #most kill_player run tag @s add most_kill

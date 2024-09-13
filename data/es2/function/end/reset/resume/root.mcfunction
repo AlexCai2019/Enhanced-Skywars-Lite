@@ -6,6 +6,7 @@ gamerule commandModificationBlockLimit 32768
 
 time set day
 
+scoreboard objectives setdisplay sidebar information
 scoreboard players set #generate time 0
 scoreboard players set #time time -1
 scoreboard players reset 存活人數 information
@@ -29,3 +30,4 @@ team empty yellow
 team empty spectator
 
 bossbar set es2:reset players
+bossbar set es2:reset value 0
