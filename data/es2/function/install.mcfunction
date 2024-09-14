@@ -74,7 +74,7 @@ scoreboard objectives add fall_damage dummy
 #火焰傷害
 scoreboard objectives add fire_damage dummy
 #死亡掉落
-scoreboard objectives add death_drop dummy
+scoreboard objectives add coffin dummy
 
 #第四本書
 #狂熱
@@ -157,8 +157,8 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
 scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
 #直接掉落
-scoreboard players set 00000000-0000-0000-0000-000000000000 death_drop 1
-scoreboard players set 00000000-0000-0000-0000-000000000001 death_drop 0
+scoreboard players set 00000000-0000-0000-0000-000000000000 coffin 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 coffin 0
 
 #第四本書
 #鐵錠狂熱

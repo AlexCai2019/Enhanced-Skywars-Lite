@@ -60,6 +60,7 @@ scoreboard objectives remove craft_shield
 scoreboard objectives remove regeneration
 scoreboard objectives remove fall_damage
 scoreboard objectives remove fire_damage
+scoreboard objectives remove coffin
 
 scoreboard objectives remove fanatic
 scoreboard objectives remove wither

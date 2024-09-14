@@ -13,7 +13,7 @@ execute if score 00000000-0000-0000-0000-000000000000 craft_projectile matches 1
 execute if score #need fanatic matches 1 as @a[scores={mine_stone=1..}] run function es2:game/mine_stone/root
 
 #獲得箱子中的經驗
-execute if score 00000000-0000-0000-0000-000000000001 death_drop matches 1 as @a[advancements={es2:command/obtain_experience_bottle=true}] run function es2:game/player/player_xp/obtain
+execute if score 00000000-0000-0000-0000-000000000001 coffin matches 1 as @a[advancements={es2:command/obtain_experience_bottle=true}] run function es2:game/player/player_xp/obtain
 
 #每隊存活人數
 execute store result score 00000000-0000-0000-0000-000000000002 survive if entity @a[team=red, gamemode=survival]
