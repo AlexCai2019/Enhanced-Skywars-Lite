@@ -72,6 +72,9 @@ function es2:utility/if_else {objective: craft_shield, prefix: "function es2:bef
 #死亡棺材
 function es2:utility/if_else {objective: coffin, prefix: "gamerule keepInventory ", value1: "false", value2: "true"}
 
+#1.8戰鬥
+function es2:utility/if_else {objective: 1_8, prefix: "function es2:before/start/battle_style/1_", value1: 9, value2: 8}
+
 scoreboard players reset * first_spectator
 scoreboard players reset * death
 scoreboard players reset * void_death

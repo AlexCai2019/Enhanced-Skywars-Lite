@@ -1,0 +1,42 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key":
+	{
+		"#":
+		{
+			"item": "minecraft:stick"
+		},
+		"X":
+		{
+			"item": "minecraft:gold_ingot"
+		}
+	},
+	"pattern":
+	[
+		"XXX",
+		" # ",
+		" # "
+	],
+	"result":
+	{
+		"id": "minecraft:golden_pickaxe",
+		"count": 1,
+		"components":
+		{
+			"minecraft:attribute_modifiers":
+			{
+				"modifiers":
+				[
+					{
+						"type": "minecraft:generic.attack_damage",
+						"id": "minecraft:base_attack_damage",
+						"operation": "add_value",
+						"amount": 2,
+						"slot": "mainhand"
+					}
+				]
+			}
+		}
+	}
+}

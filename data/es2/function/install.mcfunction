@@ -73,6 +73,8 @@ scoreboard objectives add regeneration dummy
 scoreboard objectives add fall_damage dummy
 #火焰傷害
 scoreboard objectives add fire_damage dummy
+#1.8戰鬥
+scoreboard objectives add 1_8 dummy
 #死亡掉落
 scoreboard objectives add coffin dummy
 
@@ -156,7 +158,10 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
 #有火焰傷害
 scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
-#直接掉落
+#沒有1.8戰鬥
+scoreboard players set 00000000-0000-0000-0000-000000000000 1_8 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 1_8 0
+#沒有死亡棺材
 scoreboard players set 00000000-0000-0000-0000-000000000000 coffin 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 coffin 0
 
