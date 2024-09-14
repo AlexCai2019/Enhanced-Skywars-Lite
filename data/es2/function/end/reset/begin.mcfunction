@@ -17,5 +17,6 @@ function es2:game/border/end
 
 bossbar set es2:reset players @a
 
+#結束時會schedule this 三分鐘
 schedule clear es2:end/reset/begin
 schedule function es2:end/reset/tick 1

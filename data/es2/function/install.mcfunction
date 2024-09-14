@@ -36,6 +36,7 @@ scoreboard objectives add first_spectator dummy
 scoreboard objectives add death deathCount
 scoreboard objectives add void_death deathCount
 scoreboard objectives add kill_player playerKillCount "殺人數"
+scoreboard objectives add experience dummy
 
 #第一本書
 #開放選隊
@@ -72,6 +73,8 @@ scoreboard objectives add regeneration dummy
 scoreboard objectives add fall_damage dummy
 #火焰傷害
 scoreboard objectives add fire_damage dummy
+#死亡掉落
+scoreboard objectives add death_drop dummy
 
 #第四本書
 #狂熱
@@ -153,6 +156,9 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 fall_damage 1
 #有火焰傷害
 scoreboard players set 00000000-0000-0000-0000-000000000000 fire_damage 0
 scoreboard players set 00000000-0000-0000-0000-000000000001 fire_damage 1
+#直接掉落
+scoreboard players set 00000000-0000-0000-0000-000000000000 death_drop 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 death_drop 0
 
 #第四本書
 #鐵錠狂熱

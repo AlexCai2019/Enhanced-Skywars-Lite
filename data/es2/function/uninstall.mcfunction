@@ -42,6 +42,7 @@ scoreboard objectives remove first_spectator
 scoreboard objectives remove death
 scoreboard objectives remove void_death
 scoreboard objectives remove kill_player
+scoreboard objectives remove experience
 
 scoreboard objectives remove team_setting
 scoreboard objectives remove friendly_fire

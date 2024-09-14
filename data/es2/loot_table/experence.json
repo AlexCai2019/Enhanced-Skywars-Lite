@@ -1,0 +1,65 @@
+{
+	"type": "minecraft:command",
+	"pools":
+	[
+		{
+			"rolls": 1,
+			"entries":
+			[
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:experience_bottle",
+					"functions":
+					[
+						{
+							"function": "minecraft:set_name",
+							"entity": "this",
+							"name":
+							[
+								{
+									"text": "",
+									"italic": false
+								},
+								{
+									"selector": "@s"
+								},
+								" 的經驗值"
+							]
+						},
+						{
+							"function": "minecraft:set_lore",
+							"entity": "this",
+							"mode": "append",
+							"lore":
+							[
+								[
+									{
+										"text": "",
+										"italic": false
+									},
+									{
+										"score": 
+										{
+											"name": "#points",
+											"objective": "experience"
+										},
+										"color": "gold",
+										"bold": true
+									},
+									{
+										"text": " 點",
+										"color": "white"
+									}
+								]
+							]
+						},
+						{
+							"function": "minecraft:set_custom_data",
+							"tag": "{\"player_xp\": true}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

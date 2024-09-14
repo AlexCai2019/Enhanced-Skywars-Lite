@@ -1,0 +1,18 @@
+{
+	"criteria":
+	{
+		"obtain_experience_bottle":
+		{
+			"trigger": "minecraft:inventory_changed",
+			"conditions":
+			{
+				"items":
+				[
+					{
+						"items": "minecraft:experience_bottle"
+					}
+				]
+			}
+		}
+	}
+}

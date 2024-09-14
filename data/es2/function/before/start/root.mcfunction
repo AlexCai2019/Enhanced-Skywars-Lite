@@ -69,6 +69,9 @@ function es2:utility/if_else {objective: craft_axe, prefix: "function es2:before
 #盾牌合成
 function es2:utility/if_else {objective: craft_shield, prefix: "function es2:before/start/recipe/shield {operation: ", value1: "take}", value2: "give}"}
 
+#死亡棺材
+function es2:utility/if_else {objective: death_drop, prefix: "gamerule keepInventory ", value1: "false", value2: "true"}
+
 scoreboard players reset * first_spectator
 scoreboard players reset * death
 scoreboard players reset * void_death
