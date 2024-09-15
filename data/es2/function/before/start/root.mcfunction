@@ -20,6 +20,8 @@ execute if score 00000000-0000-0000-0000-000000000001 start_resource matches 1 a
 #有關中心點的部分
 execute as f-f-f-f-f at @s run function es2:before/start/center
 
+scoreboard players reset #tick start
+scoreboard players reset #time start
 scoreboard players set #tick time 0
 scoreboard players set #time time 0
 scoreboard players set #second_unit time 0
@@ -80,6 +82,9 @@ scoreboard players reset * death
 scoreboard players reset * void_death
 scoreboard players reset * kill_player
 scoreboard players reset * mine_stone
+scoreboard players reset #old_team survive
+scoreboard players reset #old_player survive
+scoreboard players reset #old_border border
 
 #確認需不需要狂熱
 scoreboard players set #need fanatic 1

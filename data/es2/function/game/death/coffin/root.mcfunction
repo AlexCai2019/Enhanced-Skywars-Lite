@@ -1,3 +1,10 @@
+#超出可建築範圍就消失
+execute unless predicate {condition: "location_check", predicate: {position: {y: {max: 319, min: -64}}}} run return fail
+
+#有開棺材爆炸
+execute if score 00000000-0000-0000-0000-000000000001 time_bomb matches 1 if score #second time_bomb matches 0 run return run function es2:game/death/coffin/zero_second
+execute if score 00000000-0000-0000-0000-000000000001 time_bomb matches 1 align xyz positioned ~.5 ~.9 ~.5 summon text_display run function es2:game/death/coffin/time_bomb
+
 setblock ~ ~ ~ chest[type=right] destroy
 setblock ~-1 ~ ~ chest[type=left] destroy
 
@@ -56,8 +63,7 @@ clear
 
 #經驗值
 execute store result score #points experience run xp query @s points
-execute store result score #level_points experience run function es2:game/death/coffin/from_level
-scoreboard players operation #points experience += #level_points experience
+function es2:game/death/coffin/from_level
 xp set @s 0 levels
 xp set @s 0 points
 

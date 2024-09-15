@@ -62,6 +62,7 @@ scoreboard objectives remove fall_damage
 scoreboard objectives remove fire_damage
 scoreboard objectives remove 1_8
 scoreboard objectives remove coffin
+scoreboard objectives remove time_bomb
 
 scoreboard objectives remove fanatic
 scoreboard objectives remove wither

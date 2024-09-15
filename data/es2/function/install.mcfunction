@@ -75,8 +75,10 @@ scoreboard objectives add fall_damage dummy
 scoreboard objectives add fire_damage dummy
 #1.8戰鬥
 scoreboard objectives add 1_8 dummy
-#死亡掉落
+#死亡棺材
 scoreboard objectives add coffin dummy
+#棺材爆炸
+scoreboard objectives add time_bomb dummy
 
 #第四本書
 #狂熱
@@ -164,6 +166,10 @@ scoreboard players set 00000000-0000-0000-0000-000000000001 1_8 0
 #沒有死亡棺材
 scoreboard players set 00000000-0000-0000-0000-000000000000 coffin 1
 scoreboard players set 00000000-0000-0000-0000-000000000001 coffin 0
+#棺材不會爆炸
+scoreboard players set 00000000-0000-0000-0000-000000000000 time_bomb 1
+scoreboard players set 00000000-0000-0000-0000-000000000001 time_bomb 0
+scoreboard players set #second time_bomb 30
 
 #第四本書
 #鐵錠狂熱
