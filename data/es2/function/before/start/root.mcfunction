@@ -15,7 +15,7 @@ execute as @a run function es2:before/start/player/root
 
 #初始物資箱
 scoreboard players reset #edit start_resource
-execute if score 00000000-0000-0000-0000-000000000001 start_resource matches 1 at f-f-f-f-f positioned ~-4 32 ~3 run function es2:before/start/start_resource/root
+execute if score 00000000-0000-0000-0000-000000000001 start_resource matches 1 at f-f-f-f-f positioned ~-4 32 ~2 run function es2:before/start/start_resource/root
 
 #有關中心點的部分
 execute as f-f-f-f-f at @s run function es2:before/start/center

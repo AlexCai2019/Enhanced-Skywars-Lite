@@ -260,7 +260,7 @@ bossbar add es2:border {"text": "邊界縮圈", "color": "aqua"}
 bossbar set es2:border color blue
 bossbar add es2:reset {"text": "重設地圖中…", "color": "white"}
 bossbar set es2:reset color white
-bossbar set es2:reset max 144
+bossbar set es2:reset max 143
 
 data modify storage es2:data root.game.start_resource set value []
 function es2:end/reset/begin
