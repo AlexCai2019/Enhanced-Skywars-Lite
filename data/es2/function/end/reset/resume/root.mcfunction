@@ -5,6 +5,7 @@ gamerule naturalRegeneration true
 gamerule commandModificationBlockLimit 32768
 
 time set day
+kill @e[type=item]
 
 scoreboard objectives setdisplay sidebar information
 scoreboard players set #generate time 0

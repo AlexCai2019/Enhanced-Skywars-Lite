@@ -40,7 +40,6 @@ scoreboard objectives remove mine_stone
 scoreboard objectives remove constant
 scoreboard objectives remove first_spectator
 scoreboard objectives remove death
-scoreboard objectives remove void_death
 scoreboard objectives remove kill_player
 scoreboard objectives remove experience
 
@@ -87,7 +86,6 @@ team remove team_count
 team remove border
 team remove time
 team remove wither_display
-team remove void_display
 
 bossbar remove es2:wither
 bossbar remove es2:limit

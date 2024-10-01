@@ -79,7 +79,6 @@ function es2:utility/if_else {objective: 1_8, prefix: "execute as @a run attribu
 
 scoreboard players reset * first_spectator
 scoreboard players reset * death
-scoreboard players reset * void_death
 scoreboard players reset * kill_player
 scoreboard players reset * mine_stone
 scoreboard players reset #old_team survive

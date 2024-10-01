@@ -10,7 +10,4 @@ tellraw @a ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> 殺人
 tag @e[tag=most_kill] remove most_kill
 
 #凋零怪
-execute as a-b-0-5-5 if score @s kill_player matches 1.. run function es2:end/most_kill/other_entity {name: w}
-
-#虛空
-execute as 0-0-0-0-7 if score @s kill_player matches 1.. run function es2:end/most_kill/other_entity {name: v}
+execute as a-b-0-5-5 if score @s kill_player matches 1.. run function es2:end/most_kill/wither
