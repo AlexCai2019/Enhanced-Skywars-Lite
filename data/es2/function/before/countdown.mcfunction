@@ -11,4 +11,4 @@ execute if score #time start matches 0 run return run function es2:before/start/
 
 #非0
 title @a title {"score": {"name": "#time", "objective": "start"}, "color": "gold", "bold": true}
-execute as @a at @s run playsound block.note_block.pling master @s
+execute as @a at @s run playsound block.note_block.pling

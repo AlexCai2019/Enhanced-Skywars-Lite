@@ -3,7 +3,7 @@ scoreboard players reset @s death
 
 execute unless score #time time matches 0.. run return fail
 
-gamemode spectator @s
+gamemode spectator
 execute as @a at @s run playsound entity.player.death
 execute unless score #first first_spectator matches 1 run function es2:game/death/first_spectator
 execute if score 00000000-0000-0000-0000-000000000001 coffin matches 1 run function es2:game/death/coffin/root

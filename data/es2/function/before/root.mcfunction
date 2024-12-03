@@ -3,8 +3,10 @@
 #玩家
 execute as @a run function es2:before/player/root
 
+#中心點
 execute as f-f-f-f-f at @s run function es2:before/center
 
+#檢查物品
 execute as @e[type=item, tag=!lobby_check] run function es2:before/item
 
 scoreboard players add #tick time 1
