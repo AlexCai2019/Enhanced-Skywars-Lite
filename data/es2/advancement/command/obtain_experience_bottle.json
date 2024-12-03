@@ -9,7 +9,14 @@
 				"items":
 				[
 					{
-						"items": "minecraft:experience_bottle"
+						"items": "minecraft:experience_bottle",
+						"predicates":
+						{
+							"custom_data":
+							{
+								"player_xp": true
+							}
+						}
 					}
 				]
 			}

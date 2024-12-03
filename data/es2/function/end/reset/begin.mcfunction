@@ -10,12 +10,16 @@ function es2:game/border/resize with storage es2:data root.game.border
 
 scoreboard objectives setdisplay sidebar
 
-#事件結束
+#事件強制結束
 function es2:game/wither/end
 function es2:game/limit/end
 function es2:game/border/end
 
+#重設bossbar
 bossbar set es2:reset players @a
+
+#清除死亡棺材
+kill @e[type=text_display, tag=time_bomb]
 
 #結束時會schedule this 三分鐘
 schedule clear es2:end/reset/begin

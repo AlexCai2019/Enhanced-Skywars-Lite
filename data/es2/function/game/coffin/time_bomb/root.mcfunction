@@ -1,4 +1,6 @@
 #刻
+#沒有物品了
+execute unless data block ~ ~ ~ Items[0] unless data block ~-1 ~ ~ Items[0] run fill ~-1 ~ ~ ~ ~ ~ air replace chest
 #沒有箱子了
 execute unless block ~ ~ ~ chest unless block ~-1 ~ ~ chest run return run kill
 
