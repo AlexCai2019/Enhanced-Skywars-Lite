@@ -16,5 +16,5 @@ function es2:utility/if_else {objective: 1_8, prefix: "execute as @a run attribu
 $gamemode $(gamemode)
 recipe give @s *
 
-execute at f-f-f-f-f run tp @s ~ ~ ~ .0 .0
+execute at f-f-f-f-f run tp @s ~ 32.0 ~ .0 .0
 $team join $(team)

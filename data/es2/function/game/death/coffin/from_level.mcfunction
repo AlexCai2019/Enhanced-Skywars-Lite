@@ -1,5 +1,5 @@
 #https://zh.minecraft.wiki/w/經驗
-execute if entity @s[level=0] run return run scoreboard players add #points experience 0
+execute if entity @s[level=0] run return fail
 execute if entity @s[level=1] run return run scoreboard players add #points experience 7
 execute if entity @s[level=2] run return run scoreboard players add #points experience 16
 execute if entity @s[level=3] run return run scoreboard players add #points experience 27

@@ -22,7 +22,7 @@ execute unless entity 0-0-0-0-4 align xz run summon marker ~1.5 33.5 ~-3.5 {Cust
 execute unless entity 0-0-0-0-5 align xz run summon marker ~2.5 33.5 ~-3.5 {CustomName: '{"text": "黃隊", "color": "yellow"}', data: {team: "yellow", color: "yellow", message: '["加入", {"text": "黃隊", "color": "yellow", "bold": true}]'}, UUID: [I; 0, 0, 0, 5], Tags: ["choose_team"]}
 execute unless entity 0-0-0-0-6 align xz run summon marker ~3.5 33.5 ~-3.5 {CustomName: '{"text": "旁觀者", "color": "black"}', data: {team: "spectator", color: "black", message: '["加入", {"text": "旁觀者", "color": "black", "bold": true}]'}, UUID: [I; 0, 0, 0, 6], Tags: ["choose_team"]}
 execute unless entity 0-0-0-0-7 align xz run summon marker ~4.5 33.5 ~-3.5 {UUID: [I; 0, 0, 0, 7], data: {team: "player", color: "white", message: '{"text": "退出隊伍", "color": "white", "bold": true}'}, Tags: ["choose_team"]}
-execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 .0 ~.5 {CustomName: '{"text": "強化空島戰爭 Lite", "color": "aqua"}', Invulnerable: true, Invisible: true, Marker: true, NoGravity: true, Small: true, NoBasePlate: true, DisabledSlots: 4144959, Pose: {LeftArm: [0f, 90f, 320f], RightArm: [0f, 270f, 40f]}, UUID: [I; 15, 983055, 983040, 15], Tags: ["center"]}
+execute unless entity f-f-f-f-f align xz run summon armor_stand ~.5 32.0 ~.5 {CustomName: '{"text": "強化空島戰爭 Lite", "color": "aqua"}', Invulnerable: true, Invisible: true, Marker: true, NoGravity: true, Small: true, NoBasePlate: true, DisabledSlots: 4144959, Pose: {LeftArm: [0f, 90f, 320f], RightArm: [0f, 270f, 40f]}, UUID: [I; 15, 983055, 983040, 15], Tags: ["center"]}
 
 schedule function es2:utility/record_spawn 1
 

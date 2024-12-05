@@ -31,6 +31,7 @@ kill 0-0-0-0-7
 kill f-f-f-f-f
 kill a-b-0-5-5
 kill @e[type=wither_skull]
+kill @e[type=text_display, tag=time_bomb]
 
 scoreboard objectives remove information
 scoreboard objectives remove health
