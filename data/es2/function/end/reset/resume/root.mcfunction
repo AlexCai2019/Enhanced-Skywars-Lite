@@ -18,10 +18,10 @@ scoreboard players set 玩家人數 information 4
 scoreboard players set 旁觀者人數 information 3
 scoreboard players set 現在時間 information 0
 
-tp f-f-f-f-f ~ 32.0 ~ .0 .0
-data merge entity f-f-f-f-f {HandItems: [{id: "netherite_sword"}, {id: "diamond_sword"}], CustomNameVisible: true}
+tp @s ~ 32.0 ~ .0 .0
+data merge entity @s {HandItems: [{id: "netherite_sword"}, {id: "diamond_sword"}], CustomNameVisible: true}
 #這樣還比較方便
-item replace entity f-f-f-f-f armor.head with player_head[profile="Alex_Cai"]
+item replace entity @s armor.head with player_head[profile="Alex_Cai"]
 
 execute as @a run function es2:end/reset/resume/player
 team empty red

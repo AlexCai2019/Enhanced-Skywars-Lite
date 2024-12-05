@@ -2,7 +2,12 @@
 	"pack":
 	{
 		"pack_format": 48,
-		"description": "Enhanced Skywars Lite by AC"
+		"supported_formats":
+		{
+			"min_inclusive": 48,
+			"max_inclusive": 61
+		},
+		"description": "Alex Cai 製作 強化空島戰爭 Lite\nEnhanced Skywars Lite by Alex Cai"
 	},
 	"filter":
 	{
