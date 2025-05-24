@@ -76,7 +76,7 @@ function es2:utility/if_else {objective: craft_shield, prefix: "function es2:bef
 function es2:utility/if_else {objective: coffin, prefix: "gamerule keepInventory ", value1: "false", value2: "true"}
 
 #1.8戰鬥
-function es2:utility/if_else {objective: 1_8, prefix: "execute as @a run attribute @s generic.attack_speed base set ", value1: 4, value2: 1024}
+function es2:utility/if_else {objective: 1_8, prefix: "execute as @a run attribute @s attack_speed base set ", value1: 4, value2: 1024}
 
 scoreboard players reset * first_spectator
 scoreboard players reset * death

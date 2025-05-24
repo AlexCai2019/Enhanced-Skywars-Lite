@@ -1,5 +1,5 @@
 #UHC BLOX真是偉大
-tp @s ~ ~ ~ ~1.2 ~
+rotate @s ~1.2 ~
 particle end_rod ~ ~ ~ 3.5 1.0 3.5 0 1 force @a
 
 #開放選隊

@@ -3,12 +3,9 @@
 	"category": "equipment",
 	"ingredients":
 	[
-		{
-			"item": "minecraft:iron_axe"
-		},
-		{
-			"item": "minecraft:red_dye"
-		}
+		
+		"minecraft:iron_axe",
+		"minecraft:red_dye"
 	],
 	"result":
 	{
