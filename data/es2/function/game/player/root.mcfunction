@@ -2,7 +2,7 @@
 effect give @s[gamemode=spectator] night_vision infinite 0 true
 
 #低於-75
-execute at @s if predicate es2:location/too_low run function es2:game/player/too_low
+execute at @s if predicate {condition: "location_check", predicate: {position: {y: {max: -75}}}} run function es2:game/player/too_low
 
 #存活人數
 execute if entity @s[team=red] run return run title @s actionbar [{"text": "", "color": "gray"}, {"text": "紅隊", "color": "red", "bold": true}, ": ", {"score": {"name": "00000000-0000-0000-0000-000000000002", "objective": "survive"}, "color": "gold", "bold": true}, {"text": " 藍隊", "color": "blue"}, ": ", {"score": {"name": "00000000-0000-0000-0000-000000000003", "objective": "survive"}}, {"text": " 綠隊", "color": "green"}, ": ", {"score": {"name": "00000000-0000-0000-0000-000000000004", "objective": "survive"}}, {"text": " 黃隊", "color": "yellow"}, ": ", {"score": {"name": "00000000-0000-0000-0000-000000000005", "objective": "survive"}}]
