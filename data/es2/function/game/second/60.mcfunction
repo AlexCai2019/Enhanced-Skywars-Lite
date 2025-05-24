@@ -1,2 +1,2 @@
-scoreboard players set #second_tens time 0
-scoreboard players add #minute time 1
+execute store result storage es2:data root.game.time.st int 1 run scoreboard players set #second_tens time 0
+execute store result storage es2:data root.game.time.m int 1 run scoreboard players add #minute time 1

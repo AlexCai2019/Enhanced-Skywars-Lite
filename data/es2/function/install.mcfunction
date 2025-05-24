@@ -228,7 +228,7 @@ team modify blue friendlyFire false
 team modify green friendlyFire false
 team modify yellow friendlyFire false
 
-#https://bugs.mojang.com/browse/MC-87984
+#https://bugs.mojang.com/browse/MC/issues/MC-87984
 team modify red collisionRule pushOwnTeam
 team modify blue collisionRule pushOwnTeam
 team modify green collisionRule pushOwnTeam

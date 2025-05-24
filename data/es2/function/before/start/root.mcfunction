@@ -28,6 +28,7 @@ scoreboard players set #second_unit time 0
 scoreboard players set #second_tens time 0
 scoreboard players set #minute time 0
 team modify time suffix [{"text": ": ", "color": "gray"}, {"text": "0:00", "color": "gold"}]
+data modify storage es2:data root.game.time set value {m: 0, st: 0, su: 0}
 
 scoreboard players reset 隊伍數 information
 scoreboard players reset 玩家人數 information
@@ -44,7 +45,7 @@ scoreboard players operation 00000000-0000-0000-0000-000000000000 start >< 00000
 function es2:utility/if_else {objective: friendly_fire, prefix: "function es2:before/start/team_modify {option: frendlyFire, value: ", value1: '"false"}', value2: '"true"}'}
 
 #同隊推擠
-#https://bugs.mojang.com/browse/MC-87984
+#https://bugs.mojang.com/browse/MC/issues/MC-87984
 function es2:utility/if_else {objective: friendly_push, prefix: "function es2:before/start/team_modify {option: collisionRule, value: ", value1: "pushOwnTeam}", value2: "always}"}
 
 #自然回血
