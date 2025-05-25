@@ -11,7 +11,7 @@ execute if score 00000000-0000-0000-0000-000000000000 craft_projectile matches 1
 execute if score #need fanatic matches 1 as @a[scores={mine_stone=1..}] run function es2:game/mine_stone/root
 
 #1.8戰鬥
-execute if score 00000000-0000-0000-0000-000000000001 1_8 matches 1 as @a[gamemode=!spectator] if items entity @s weapon #es2:weapon unless items entity @s weapon #es2:weapon[custom_data~{modified: true}] run function es2:game/player/modify_weapon
+execute if score 00000000-0000-0000-0000-000000000001 old_battle matches 1 as @a[gamemode=!spectator] if items entity @s weapon #es2:weapon unless items entity @s weapon #es2:weapon[custom_data~{modified: true}] run function es2:game/player/modify_weapon
 
 #有死亡棺材
 execute if score 00000000-0000-0000-0000-000000000001 coffin matches 1 run function es2:game/coffin/root

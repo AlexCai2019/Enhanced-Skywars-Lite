@@ -5,5 +5,5 @@ fill ~-5 31 ~-5 ~5 34 ~5 air
 #最後再清掉指令方塊
 setblock ~ 319 ~ air
 
-data merge entity @s {ArmorItems: [{}, {}, {}, {}], HandItems: [{}, {}], CustomNameVisible: false}
+data merge entity @s {equipment: {head: {}, chest: {}, feet: {}, legs: {}, mainhand: {}, offhand: {}}, CustomNameVisible: false}
 tp @s ~ -63.5 ~ .0 .0

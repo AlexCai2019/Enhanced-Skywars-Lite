@@ -19,7 +19,7 @@ scoreboard players set 旁觀者人數 information 3
 scoreboard players set 現在時間 information 0
 
 tp @s ~ 32.0 ~ .0 .0
-data merge entity @s {HandItems: [{id: "netherite_sword"}, {id: "diamond_sword"}], CustomNameVisible: true}
+data merge entity @s {equipment: {mainhand: {id: "netherite_sword"}, offhand: {id: "diamond_sword"}}, CustomNameVisible: true}
 #這樣還比較方便
 item replace entity @s armor.head with player_head[profile="Alex_Cai"]
 
