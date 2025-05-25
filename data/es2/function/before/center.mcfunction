@@ -7,3 +7,5 @@ execute if score 00000000-0000-0000-0000-000000000001 team_setting matches 1 pos
 
 #初始物資
 execute if score 00000000-0000-0000-0000-000000000001 start_resource matches 1 unless score #edit start_resource matches 1 run data modify block ~-4 32 ~2 Items set from storage es2:data root.game.start_resource
+
+execute if predicate es2:second run function es2:before/second/root
