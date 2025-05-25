@@ -27,7 +27,7 @@ scoreboard players set #time time 0
 scoreboard players set #second_unit time 0
 scoreboard players set #second_tens time 0
 scoreboard players set #minute time 0
-team modify time suffix [{"text": ": ", "color": "gray"}, {"text": "0:00", "color": "gold"}]
+team modify time suffix [{text: ": ", color: "gray"}, {text: "0:00", color: "gold"}]
 data modify storage es2:data root.game.time set value {m: 0, st: 0, su: 0}
 
 scoreboard players reset 隊伍數 information

@@ -1,5 +1,5 @@
-title @s title {"text": "遊戲開始！", "color": "green", "bold": true, "italic": true}
-tellraw @s ["<", {"text": "強化空島戰爭 Lite", "color": "aqua"}, "> 遊戲開始！"]
+title @s title {text: "遊戲開始！", color: "green", bold: true, italic: true}
+tellraw @s ["<", {text: "強化空島戰爭 Lite", color: "aqua"}, "> 遊戲開始！"]
 
 clear
 effect clear

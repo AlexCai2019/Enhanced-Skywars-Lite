@@ -1,4 +1,4 @@
-function es2:before/book/exchange {option: '", {"translate": "block.minecraft.bedrock"}, "地板', objective: bedrock_floor}
+function es2:before/book/exchange {option: '", {translate: "block.minecraft.bedrock"}, "地板', objective: bedrock_floor}
 
 #直接在設定階段就生效
 gamerule commandModificationBlockLimit 65536

@@ -12,7 +12,13 @@
 		"id": "minecraft:iron_axe",
 		"components":
 		{
-			"minecraft:custom_name": "{\"text\": \"消防斧\", \"color\": \"#FF0000\", \"bold\": true, \"italic\": false}" 
+			"minecraft:custom_name":
+			{
+				"text": "消防斧",
+				"color": "#FF0000",
+				"bold": true,
+				"italic": false
+			} 
 		}
 	}
 }

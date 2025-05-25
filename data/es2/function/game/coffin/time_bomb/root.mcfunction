@@ -10,4 +10,4 @@ execute unless predicate es2:second run return fail
 scoreboard players remove @s time_bomb 1
 execute if score @s time_bomb matches 0 run return run function es2:game/coffin/time_bomb/explosion
 
-data modify entity @s text set value '{"score": {"name": "@s", "objective": "time_bomb"}, "color": "#FF0000", "bold": true}'
+data modify entity @s text set value {score: {name: "@s", objective: "time_bomb"}, color: "#FF0000", bold: true}
