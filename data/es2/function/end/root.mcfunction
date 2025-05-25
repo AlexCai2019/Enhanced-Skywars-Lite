@@ -11,6 +11,6 @@ execute if entity @a[scores={first_spectator=1}] run tellraw @a ["<", {text: "�
 #顯示殺人魔鬼
 function es2:end/most_kill/root
 
-tellraw @a ["<", {text: "強化空島戰爭 Lite", color: "aqua"}, "> ", {text: "點我重設地圖", color: "yellow", click_event: {action: "run_command", command: "/execute if score #time time matches -2 run function es2:end/reset/begin"}}]
+tellraw @a ["<", {text: "強化空島戰爭 Lite", color: "aqua"}, "> ", {text: "點我重設地圖", color: "yellow", hover_event: {action: "show_text", value: "點我重設地圖"}, click_event: {action: "run_command", command: "/execute if score #time time matches -2 run function es2:end/reset/begin"}}]
 
 schedule function es2:end/reset/begin 180s
