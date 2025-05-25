@@ -9,7 +9,5 @@ execute as f-f-f-f-f at @s run function es2:before/center
 #檢查物品
 execute as @e[type=item, tag=!lobby_check] run function es2:before/item
 
-execute as f-f-f-f-f if predicate {condition: "entity_properties", entity: "this", predicate: {periodic_tick: 20}} run function es2:before/second/root
-
 #倒數計時
 execute if score 00000000-0000-0000-0000-000000000001 start matches 1 run function es2:before/countdown
